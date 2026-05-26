@@ -1,0 +1,27 @@
+# Large raw data files (hundreds of MB to GB) - use NYC TLC Open Data source
+base_data.csv
+test*.csv
+testv*.csv
+run*.csv
+Data_code/geohash_dataframes/
+earningsmaximisation/raweta.csv
+
+# Credential file - MUST NOT commit
+vpn\ password.png
+
+# PDFs and internal planning documents - PDFs attached as GitHub Release assets
+*.pdf
+*.docx
+*.pptx
+
+# Unknown artifacts
+Data_code/Logout
+
+# Certificates (personal, not part of project)
+Certificates/
+
+# Python / Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.DS_Store

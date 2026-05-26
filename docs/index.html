@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYC Ride-Hailing Supply-Demand — Interactive Maps</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      padding: 40px 24px;
+    }
+    .header {
+      max-width: 760px;
+      margin: 0 auto 48px;
+    }
+    h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 8px; }
+    .subtitle {
+      color: #8b949e;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .tag {
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      color: #58a6ff;
+    }
+    .grid {
+      max-width: 760px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .card:hover { border-color: #58a6ff; background: #1c2230; }
+    .card-icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h2 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+    .card p { font-size: 0.875rem; color: #8b949e; line-height: 1.5; }
+    .footer {
+      max-width: 760px;
+      margin: 48px auto 0;
+      font-size: 0.8rem;
+      color: #484f58;
+      text-align: center;
+    }
+    .footer a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>NYC Ride-Hailing Supply-Demand</h1>
+    <p class="subtitle">
+      Interactive geospatial visualizations from a machine learning project predicting
+      taxi and ride-hailing vehicle supply in Lower Manhattan using NYC TLC trip record data.
+    </p>
+    <div class="tags">
+      <span class="tag">scikit-learn</span>
+      <span class="tag">Folium</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Geohash</span>
+      <span class="tag">NYC TLC Data</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="pickup_map.html">
+      <div class="card-icon">🗺️</div>
+      <h2>Pickup Density Map</h2>
+      <p>Per-geohash cell pickup counts across Lower Manhattan. Explore spatial demand distribution.</p>
+    </a>
+
+    <a class="card" href="dropoff_map.html">
+      <div class="card-icon">📍</div>
+      <h2>Dropoff Density Map</h2>
+      <p>Dropoff distribution across Manhattan geohash cells. Compare with pickup patterns.</p>
+    </a>
+
+    <a class="card" href="pickup_heatmap.html">
+      <div class="card-icon">🔥</div>
+      <h2>Pickup Heatmap</h2>
+      <p>Continuous heat overlay of pickup intensity across the borough.</p>
+    </a>
+
+    <a class="card" href="pickup_heatmap-2.html">
+      <div class="card-icon">🌡️</div>
+      <h2>Pickup Heatmap v2</h2>
+      <p>Refined heatmap with updated data preprocessing and smoothing parameters.</p>
+    </a>
+
+    <a class="card" href="geohash_map.html">
+      <div class="card-icon">🔲</div>
+      <h2>Geohash Grid Map</h2>
+      <p>The geohash cell grid used to bucket trip data for the ML model. Shows cell boundaries and IDs.</p>
+    </a>
+  </div>
+
+  <div class="footer">
+    <p>
+      Built by <a href="https://github.com/vinayak-kapur">Vinayak Kapur</a> &mdash;
+      <a href="https://github.com/vinayak-kapur/nyc-ridehail-supply-demand">View on GitHub</a>
+    </p>
+    <p style="margin-top:6px;">Data source: <a href="https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page">NYC TLC Trip Record Data</a> (public)</p>
+  </div>
+
+</body>
+</html>
