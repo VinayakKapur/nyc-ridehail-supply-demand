@@ -2,7 +2,7 @@
 
 A machine learning project that predicts taxi and ride-hailing vehicle supply per geohash cell in Lower Manhattan using NYC TLC trip record data. The model helps identify under-served zones and time windows where supply consistently falls short of demand.
 
-**[Live interactive maps →](https://vinayak-kapur.github.io/nyc-ridehail-supply-demand/)**
+**[Live interactive maps →](https://vinayakkapur.github.io/nyc-ridehail-supply-demand/)**
 
 ## What It Does
 
@@ -52,7 +52,7 @@ jupyter notebook
 
 - [Final Presentation](docs/FinalPresentationV2.pdf)
 - [Executive Summary](docs/Executive_Summary.pdf)
-- [Live Maps](https://vinayak-kapur.github.io/nyc-ridehail-supply-demand/)
+- [Live Maps](https://vinayakkapur.github.io/nyc-ridehail-supply-demand/)
 
 ## Context
 
